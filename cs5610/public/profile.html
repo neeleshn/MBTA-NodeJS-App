@@ -1,0 +1,41 @@
+    <form name="ProfileForm" novalidate>
+        <div class="row">
+            <div class="col-sm-12" style="padding:20px; background-color: #444444; color:White ">
+            <br /><h1>Welcome {{ActiveUser.Name}}</h1><br />
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-sm-12" style="padding:20px; background-color:#cccccc">
+                <br /><h3>General Alerts</h3><br />
+                <ul>
+                    <li ng-repeat="x in alerts">{{x.header_text}}</li>
+                </ul>
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-sm-12" style="padding:20px; background-color:#cccccc">
+                <br /><h3>Alerts by Users</h3><br />
+                <ul>
+                    <li ng-repeat="x in useralerts"><b>{{x.Name}} : </b>{{x.Alert}}</li>
+                </ul>
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-sm-12" style="padding:20px; background-color:#444444">
+                <br /><h3 style="color:White">Post an Alert</h3><br />
+                <div class="input-group">
+                    <input type="text" ng-model="alertModel" name="alertName" class="form-control" /required>
+                    <span class="input-group-btn">
+                        <button ng-click="PostAlert()" ng-disabled="ProfileForm.alertName.$error.required" class="btn btn-success">
+                            Post</button>
+                    </span>
+                </div>
+                <br /><br /><h3 ng-show="flag" style="color:Green">Your alert is Posted !!! </h3>
+                <br /><br />&nbsp;
+            </div>
+        </div>
+        <br /><br />&nbsp;
+    </form>

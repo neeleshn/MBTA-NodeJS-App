@@ -1,0 +1,88 @@
+@media screen and (max-width: 2000px) {
+  .profname {
+    font-size: 50px;
+    text-align:right;
+    padding-right:430px;
+  }
+  .banner {
+    font-size: 45px;
+  }
+  .row {
+    text-align:justify;
+  }
+  nav 
+  {
+      height: 60px;
+  }
+  .cover-wrap 
+  {
+    height: 450px;
+    overflow: hidden;
+    width:100%;
+  }
+  .prof-wrap
+  {
+      width:300px; 
+      float:right; 
+      position:absolute; 
+      top:230px; 
+      right:100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profname {
+    font-size: 30px;
+    text-align:right;
+    padding-right:310px;
+  }
+  .row {
+    text-align:justify;
+  }
+  nav 
+  {
+      height:35px;
+  }
+  .cover-wrap 
+  {
+    height: 300px;
+    overflow: hidden;
+  }
+  .prof-wrap
+  {
+      width:200px; 
+      float:right; 
+      position:absolute; 
+      top:160px; 
+      right:10%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .profname {
+    font-size: 16px;  
+    text-align:right;
+    padding-right:150px;
+  }
+  nav 
+  {
+      height:20px;
+  }
+  .cover-wrap 
+  {
+    height: 200px;
+    overflow: hidden;
+  }  
+  .prof-wrap
+  {
+      width:120px; 
+      float:right; 
+      position:absolute; 
+      top:125px; 
+      right:5%;
+  }
+  .row {
+    text-align:justify;
+  }
+}
+

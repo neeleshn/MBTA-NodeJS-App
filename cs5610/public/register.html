@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<body>
+    <form name="RegisterForm" novalidate>
+        <div class="row">
+            <div class="col-sm-6" style="padding:20px">
+                <img src="mbta.jpg" width="100%" height="auto" />
+            </div>
+            <div class="col-sm-6" style="padding:20px"><br /><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-fire"></span></span>
+                    <input type="text" class="form-control" name="username" ng-model="usermodel" ng-change="usercheck()" placeholder="Enter a Unique Username" required />
+                </div>
+                <center><span style="color: red" ng-show="RegisterForm.username.$error.required">Enter Username!!!</span>
+                <span style="color: red" ng-hide="RegisterForm.username.$error.required">{{usernameerr}}</span></center>
+                <br /><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" name="namename" ng-model="namemodel" placeholder="Enter your name" required />
+                </div>
+                <center><span style="color: red" ng-show="RegisterForm.namename.$error.required">Enter Name!!!</span></center>
+                <br /><br /><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="password" class="form-control" name="passname" ng-model="passmodel" placeholder="Enter a password" required />
+                </div>
+                <center><span style="color: red" ng-show="RegisterForm.passname.$error.required">Enter Password!!!</span></center>
+                <br /><br /><br />
+                <center><button class="btn btn-default btn-lg" 
+                ng-disabled =  "RegisterForm.namename.$error.required || 
+                                RegisterForm.username.$error.required || 
+                                RegisterForm.passname.$error.required || 
+                                (usernameerr=='Username Already Exists!!!')"
+                ng-click="signup()"><b>Register</b></button></center>
+                <br />
+                <h3 ng-show="flag" style="color:Green">You have Successfully Registered... Please Login</h3>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

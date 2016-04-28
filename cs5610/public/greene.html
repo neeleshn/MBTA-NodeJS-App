@@ -1,0 +1,92 @@
+        <div class="row">
+            <div class="col-sm-5" style="padding: 20px">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                        <input list="FromStation" name="FromStation" class="form-control" ng-model="FromStation">
+                          <datalist id="FromStation">
+                            <option value="Heath Street">
+                            <option value="Back of the Hill">
+                            <option value="Riverway">
+                            <option value="Mission Park">
+                            <option value="Fenwood Road">
+                            <option value="Brigham Circle">
+                            <option value="Longwood Medical Area">
+                            <option value="Museum of Fine Arts">
+                            <option value="Northeastern">
+                            <option value="Symphony">
+                            <option value="Prudential">
+                            <option value="Copley">
+                            <option value="Arlington">
+                            <option value="Boylston">
+                            <option value="Park Street">
+                            <option value="Haymarket">
+                            <option value="North Station">
+                            <option value="Science Park">
+                            <option value="Lechmere">
+                          </datalist>
+                </div>
+            </div>
+            <div class="col-sm-5" style="padding: 20px">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                        <input list="ToStation" name="ToStation" class="form-control" ng-model="ToStation">
+                          <datalist id="ToStation">
+                            <option value="Heath Street">
+                            <option value="Back of the Hill">
+                            <option value="Riverway">
+                            <option value="Mission Park">
+                            <option value="Fenwood Road">
+                            <option value="Brigham Circle">
+                            <option value="Longwood Medical Area">
+                            <option value="Museum of Fine Arts">
+                            <option value="Northeastern">
+                            <option value="Symphony">
+                            <option value="Prudential">
+                            <option value="Copley">
+                            <option value="Arlington">
+                            <option value="Boylston">
+                            <option value="Park Street">
+                            <option value="Haymarket">
+                            <option value="North Station">
+                            <option value="Science Park">
+                            <option value="Lechmere">
+                          </datalist>
+                </div>
+            </div>
+            <div class="col-sm-2" style="padding: 20px">
+                <button class="btn btn-success" ng-click="searchfn()">Search</button>
+            </div>
+        </div>
+        <br />
+        <div ng-show="validsearch" class="container">
+            <div class="row">
+                <div class="col-sm-5" style="padding: 20px">
+                <div class=" backdiv-green">
+                    <br /><br />
+                    Departs from <br /><span class="glyphicon glyphicon-home"></span>
+                    <span class="large"> {{FromStationjs}} </span>at <br />
+                    <span class="glyphicon glyphicon-time"></span><span class="large-i">{{FromTime}}</span><br /><br /><br />
+                    Reaches <br /><span class="glyphicon glyphicon-map-marker"></span>
+                    <span class="large"> {{ToStationjs}}</span> at <br />
+                    <span class="glyphicon glyphicon-time"></span><span class="large-i">{{ToTime}}</span><br /><br /><br />
+                    <button class="btn btn-default" disabled><span class="glyphicon glyphicon-time"></span><span class="large-i">{{TimeDiff}}</span></button>
+                    </div>
+                </div>
+                <div class="col-sm-5" style="padding: 20px">
+                    <iframe ng-src="{{trustSrc(MapsURL)}}" border-radius="10" width="100%" height="400" frameborder="0"></iframe>
+                </div>
+                <div class="col-sm-2">&nbsp;</div>                
+            </div>
+        </div>
+<br /><hr /><br />
+<div ng-show="FavGreenETrips.length>0" class="container">
+    <div class=" backdiv-green">
+        <br />
+        <h2>Your favourite routes in Green - E Line</h2>
+        <ul>
+        <li ng-repeat="x in FavGreenETrips track by $index">
+        {{x}}
+        </li>
+        </ul>
+    </div>
+</div>

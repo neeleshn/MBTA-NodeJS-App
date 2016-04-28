@@ -1,0 +1,107 @@
+<html>
+<body>
+        <div class="row">
+            <div class="col-sm-5" style="padding: 20px">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                        <input list="FromStation" name="FromStation" class="form-control" ng-model="FromStation">
+                          <datalist id="FromStation">
+                            <option value="Boston College">
+                            <option value="South Street">
+                            <option value="Chestnut Hill Avenue">
+                            <option value="Chiswick Road">
+                            <option value="Sutherland Road">
+                            <option value="Washington Street">
+                            <option value="Warren Street">
+                            <option value="Allston Street">
+                            <option value="Griggs Street">
+                            <option value="Harvard Avenue">
+                            <option value="Packards Corner">
+                            <option value="Babcock Street">
+                            <option value="Pleasant Street">
+                            <option value="Saint Paul Street">
+                            <option value="Boston Univ West">
+                            <option value="Boston Univ Central">
+                            <option value="Boston Univ East">
+                            <option value="Blandford Street">
+                            <option value="Kenmore">
+                            <option value="Hynes">
+                            <option value="Copley">
+                            <option value="Arlington">
+                            <option value="Boylston">
+                            <option value="Park Street">
+                          </datalist>
+                </div>
+            </div>
+            <div class="col-sm-5" style="padding: 20px">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                        <input list="ToStation" name="ToStation" class="form-control" ng-model="ToStation">
+                          <datalist id="ToStation">
+                            <option value="Boston College">
+                            <option value="South Street">
+                            <option value="Chestnut Hill Avenue">
+                            <option value="Chiswick Road">
+                            <option value="Sutherland Road">
+                            <option value="Washington Street">
+                            <option value="Warren Street">
+                            <option value="Allston Street">
+                            <option value="Griggs Street">
+                            <option value="Harvard Avenue">
+                            <option value="Packards Corner">
+                            <option value="Babcock Street">
+                            <option value="Pleasant Street">
+                            <option value="Saint Paul Street">
+                            <option value="Boston Univ West">
+                            <option value="Boston Univ Central">
+                            <option value="Boston Univ East">
+                            <option value="Blandford Street">
+                            <option value="Kenmore">
+                            <option value="Hynes">
+                            <option value="Copley">
+                            <option value="Arlington">
+                            <option value="Boylston">
+                            <option value="Park Street">
+                          </datalist>
+                </div>
+            </div>
+            <div class="col-sm-2" style="padding: 20px">
+                <button class="btn btn-success" ng-click="searchfn()">Search</button>
+            </div>
+        </div>
+        <div ng-show="validsearch" class="container">
+            <div class="row">
+                <div class="col-sm-5" style="padding: 20px">
+                <div class=" backdiv-green">
+                    <br /><br />
+                    Departs from <br /><span class="glyphicon glyphicon-home"></span>
+                    <span class="large"> {{FromStationjs}} </span>at <br />
+                    <span class="glyphicon glyphicon-time"></span><span class="large-i">{{FromTime}}</span><br /><br /><br />
+                    Reaches <br /><span class="glyphicon glyphicon-map-marker"></span>
+                    <span class="large"> {{ToStationjs}}</span> at <br />
+                    <span class="glyphicon glyphicon-time"></span><span class="large-i">{{ToTime}}</span><br /><br /><br />
+                    <button class="btn btn-default" disabled><span class="glyphicon glyphicon-time"></span><span class="large-i">{{TimeDiff}}</span></button>
+                    </div>
+                </div>
+                <div class="col-sm-5" style="padding:20px">
+                    <iframe ng-src="{{trustSrc(MapsURL)}}" border-radius="10" width="100%" height="400" frameborder="0"></iframe>
+                </div>
+                <div class="col-sm-2" style="padding:20px">
+                    <span ng-show="ActiveUser"><button class="btn btn-success" ng-click="AddTrip()"><span class="glyphicon glyphicon-star"></span></button></span>
+                </div>
+            </div>
+        </div>
+<br /><hr /><br />
+<div ng-show="FavGreenBTrips.length>0" class="container">
+    <div class=" backdiv-green">
+        <br />
+        <h2>Your favourite routes in Green - B Line</h2>
+        <ul>
+        <li ng-repeat="x in FavGreenBTrips track by $index">
+        {{x}}
+        </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

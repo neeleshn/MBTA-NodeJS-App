@@ -1,0 +1,434 @@
+﻿<html>
+<head>
+    <title>Neelesh's Arena</title>
+    <link rel="stylesheet" href="cs5610/public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="cs5610/public/css/profileCSS.css" />
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:black" >
+  <div class="container">
+    <div class="banner" style="color:White"><em><b> CS5610 - MBTA Project Documentation </b></em></div>
+  </div>
+</nav>
+<img class="prof-wrap" src="profilepic.jpg" />
+<img class="cover-wrap" src="coverpic.jpg" />
+<div class="container-fluid">
+    <div class="row" style="background-color:#cccc66">
+        <h1 class="profname" style="color:brown">Abstract</h1>
+<p>
+                <b>Goal:</b>
+                The objective of this web development project is to design a website, enabling the end user to enter the boarding and destination place to obtain the schedule for next available train. MBTA-realtime RESTful web service is consumed to fetch the live data and is then processed with logics to extract the required train timings. 
+                <br />
+                <b>System Features: </b>
+                <br />
+            </p>
+
+            <ul>
+                <li>
+                    <h3>Green-Line Train Search:</h3>
+                    User has the ability to search for train schedule in the Green-Line for all the routes (B, C, D & E) with both Inbound & Outbound directions. 
+
+                </li>
+
+                <li>
+                    <h3>Orange-Line Train Search: </h3>
+                    User has the ability to search for train schedule in the Orange-Line for both Inbound & Outbound directions.
+
+                </li>
+
+                <li>
+                    <h3>Red-Line Train Search: </h3>
+                    User has the ability to search for train schedule in the Red-Line with both Inbound & Outbound directions.
+                </li>
+
+                <li>
+                    <h3>Blue-Line Train Search: </h3>
+                    User has the ability to search for train schedule in the Blue-Line with both Inbound & Outbound directions. 
+                </li>
+
+                <li>
+                    <h3>Google-Maps Integration: </h3>
+                    User has the ability to view the train routes in google maps based on boarding and destination stops. 
+                The latitude and longitude of the corresponding stops are identified and then it is plotted over google maps with colored markers. 
+                </li>
+                
+            </ul>
+
+            <br />
+            <p>
+                The Massachusetts Bay Transportation Authority, Train Route:
+               
+                <br />
+                <img src="coverpic.jpg" width="80%" height="auto" />
+            </p>
+    </div>
+    <div class="row" style="background-color: Silver">
+        <h1 class="profname" style="color:brown;">Acknowledgement</h1>
+        <p>
+                <b>CS5610: Web Development </b>is one of the most practice oriented courses that I have taken in my masters program. Learning by experimenting has been a great experience, under the guidance of eminent faculty.
+
+                <br />
+                First I want to thank <b>Prof Jose Annunziato</b> for such a well-organized course! The wealth of resources provided in Prof. Rasala’s home page and the web development course page is enough to take us through the entire course. In addition to these, the regular email updates and valuable suggestions and guidelines helped me a lot throughout the course.
+
+                <br />
+                Finally, my Teaching Assistant <a href="http://net4.ccs.neu.edu/home/rishi11/" target="_blank">Rishi Katyal</a>has been a constant source of inspiration and encouragement throughout the semester. The weekly reviews and feedbacks were immensely helpful in keeping me on track.
+                Thank you for such a great learning experience!
+
+            </p>
+
+            <p>
+                <b>Data Courtesy: </b>
+                <br />
+            </p>
+            <ul>
+                <li>Massachussets Bay Transport Authority: Special thanks to MBTA, which serves as a back bone for my project by providing real time data.
+                         Follow the link for more details: <a href="http://realtime.mbta.com/portal" target="_blank">MBTA Developer Portal</a></li>
+                <li>I would also take this opportunity to thank <a href="http://net4.ccs.neu.edu/home/venkat89/" target="_blank">Venkatesh Balasubramaniam</a> from Spring 2014 for letting me use his idea of the project.</li>
+            </ul>
+    </div>
+    <div class="row" style="background-color: #cccc66">
+        <h1 class="profname" style="color:brown;">Technologies Used</h1>
+        <p>
+                <b>Web Technologies:</b>
+            </p>
+            <ul>
+                <li>Node JS
+                </li>
+                <li>Express JS
+                </li>
+                <li>Angular JS
+                </li>
+                <li>Mongoose JS
+                </li>
+                <li>jQuery
+                </li>
+                <li>HTML5
+                </li>
+                <li>Bootstrap 3
+                </li>
+                <li>CSS3
+                </li>
+            </ul>
+
+            <p>
+                <b>Database:</b>
+            </p>
+            <ul>
+                <li>Mongo DB
+                </li>
+            </ul>
+
+            <p>
+                <b>Compatible Browsers:</b>
+            </p>
+            <ul>
+                <li>Google Chrome</li>
+                <li>Mozilla Firfox</li>
+                <li>Internet Explorer 10 & Above</li>
+            </ul>
+    </div>
+    <div class="row" style="background-color: Silver">
+        <h1 class="profname" style="color:brown">Home Page</h1>
+        <p>
+                <b>Home Page: </b>The prime factor to make any website user friendly is to have it responsive.
+                Why this responsive design is so imporant?? Firstly, positive user experience
+                is a must. Secondly, mobile usage is exploding and thirdly, responsive adapts to future devices.
+                Below is the screenshot of MBTA-T-TIMINGS home page:
+                <br /><br />
+                <h3>Desktop Screen Shot</h3><br />
+                <img src="desktophome.jpg" width="90%" height="auto"/>
+                <br />
+                The user is initially redirected to a registration page. If he is a new user, he registers else he logins using the login in the navigation bar. The background of the screen is video which continuously loops itself muted.<br /><br /><br />
+                <h3>Mobile Screen Shot</h3><br />
+                <img src="mobilehome.jpg" width="50%" height="auto"/><br />
+                The video doesn't play in small screen devices. It is replaced with an image.
+            </p>
+    </div>
+    <div class="row" style="background-color: #cccc66">
+        <h1 class="profname" style="color:brown;">Green Line</h1>
+        <p>
+                <b>Description: </b>The Green Line is a light rail system run by the Massachusetts Bay Transportation Authority (MBTA) in the Boston, Massachusetts metropolitan area.
+                It is the oldest Boston subway line, which is known locally as the 'T'. It runs underground downtown and on the surface in outlying areas
+               
+                <img src="greenans.jpg" width="90%" height="auto" />
+                Green Line has a drop down where u can select the different routes in Green Line (B,C,D & E).
+                The user can search for train schedule in each of the Green-Line routes with both Inbound & Outbound directions.
+                After selecting the boarding and destination place, user should hit on the "Search" button which would display the immediate train schedule results.
+                Google Maps API is used to plot the geographic location of boarding and destination places. DirectionsService object is utilized for polyline route drawing on the google maps.           
+                
+            </p>
+            <p>
+                <b>Demystifying The Architecture: </b>
+                <br />
+                <br />
+                <b>Step 1: Fetch The Stop ID - </b>Every stop has an unique StopID associated to it. Once after user selects the stop name, the corresponding StopID is fetched from the SQL DB Table - venkat89.GreenLinesIntegratedStopDetails
+                <br />
+                <b>Step 2: Fetch The RouteID's - </b>Compute the RouteID's for the boarding and destination places. There might be multiple train routes which would pass along the boarding and destination place.
+                For instance, a train route in Green Line E might be from Heath-Street to Govt. Center and another route might be from Heath-Street to Lechmere.
+                All these RouteID's are captured which is required for further perusal.
+                <br />
+                <b>Step 3: Find The Matching RouteID's - </b>Once after obtaining all the RouteID's for the respective boarding and destination stop we will have to compute the matching RouteID's.
+                <br />
+                <b>Step 4: Identify The Direction (InBound / OutBound) - </b>After computing the matching RouteID's, the direction has to be identified.
+                 Basically the direction should be one of the following: Inbound or Outbound and is indicated by (0 / 1) in the response xml. 
+                <br />
+                <b>Step 5: JSON Parsing - </b>Here comes the final step in our logic processing. With the obtained RouteID and direction, an API call is made to the MBTA which returns the train schedule on that route in XML/JSON format.
+                 I have written a helper functions for processing the JSON data to retrieve the arrival and departure timings of the train at the respective boarding and destination spots. The time format in the JSON is of Unix Epoch time stamp, which is then converted to the normal readable format for displaying it in the front end.
+
+            </p>
+
+            <p>
+                <b>Test Data: </b>Boarding Place : Northeastern ; Destination Place : Boylston
+            </p>
+
+            <p>
+                <b>Source Code:</b>
+                <ul>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/greenb.html">Green - B line HTML Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/greenc.html">Green - C line HTML Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/greend.html">Green - D line HTML Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/greene.html">Green - E line HTML Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/greenb.js">Green - B line JS Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/greenc.js">Green - C line JS Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/greend.js">Green - D line JS Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/greene.js">Green - E line JS Code</a></li>              
+                 </ul>
+            </p>
+    </div>
+    <div class="row" style="background-color: Silver">
+        <h1 class="profname" style="color:brown">Orange Line</h1>
+        <p>
+                <b>Description: </b>The Orange Line is one of the four subway lines of the Massachusetts Bay Transportation Authority. 
+                It extends from Forest Hills in Jamaica Plain, Boston in the south to Oak Grove in Malden, Massachusetts in the north.
+                It meets the Red Line at Downtown Crossing, the Blue Line at State, and the Green Line at Haymarket and North Station. 
+                It connects with Amtrak and Commuter Rail service at Back Bay and North Station, and just the commuter rail at Ruggles station in Roxbury and at Forest Hills.
+                From 1901 to 1987 it provided the first elevated rapid transit in Boston; the last elevated section was torn down in 1987 when the southern portion of the line was moved to the Southwest Corridor.
+                <img src="orangeans.jpg" width="90%" height="auto" />
+                Orange Line tab allows the user to search for train schedule in the Orange-Line for both Inbound & Outbound directions. To enhance the user friendliness of the website, I have provided the auto complete suggestions for both the boarding and destination place. 
+                After selecting the boarding and destination place, user should hit on the "Search" button which would display the immediate train schedule results. 
+                Google Maps API is used to plot the geographic location of boarding and destination places. DirectionsService object is utilized for polyline route drawing on the google maps.
+
+                <br />
+
+            </p>
+            <p>
+                <b>Demystifying The Architecture: </b>
+                <br />
+                <br />
+                <b>Step 1: Fetch The Stop ID - </b>Every stop has an unique StopID associated to it. Once after user selects the stop, the corresponding StopID is fetched from the SQL DB Table - venkat89.OrangeLineStopDetails
+                <br />
+                <b>Step 2: Fetch The RouteID's - </b>Compute the RouteID's for the boarding and destination places. There might be multiple train routes which would pass along the boarding and destination place.
+                 For instance, a train route in Orange Line might be from Forest Hills to Haymarket and another route might be from Forest Hills to Oak Grove.
+                 All these RouteID's are captured which is required for further perusal.
+                <br />
+                <b>Step 3: Find The Matching RouteID's - </b>Once after obtaining all the RouteID's for the respective boarding and destination stop we will have to compute the matching RouteID's.
+                <br />
+                <b>Step 4: Identify The Direction (InBound / OutBound) - </b>After computing the matching RouteID's, the direction has to be identified.
+                 Basically the direction should be one of the following: Inbound or Outbound and is indicated by (0 / 1) in the response xml. 
+                <br />
+                <b>Step 5: JSON Parsing - </b>Here comes the final step in our logic processing. With the obtained RouteID and direction, an API call is made to the MBTA which returns the train schedule on that route in XML/JSON format.
+                 I have written a helper functions for processing the JSON data to retrieve the arrival and departure timings of the train at the respective boarding and destination spots. The time format in the JSON is of Unix Epoch time stamp, which is then converted to the normal readable format for displaying it in the front end.
+            </p>
+
+            <p>
+                <b>Test Data: </b>Boarding Place : Ruggles ; Destination Place : Downtown Crossing
+            </p>
+
+            <p>
+                <b>Source Code:</b>
+            </p>
+            <ul>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/orange.html">Orange line HTML Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/OrangeLine.js">Orange line JS Code</a></li>                    
+            </ul>
+    </div>
+<div class="row" style="background-color: #cccc66">
+        <h1 class="profname" style="color:brown;">Red Line</h1>
+        <p>
+                <b>Description: </b>The Red Line is a rapid transit line operated by the Massachusetts Bay Transportation Authority (MBTA), running roughly northwest to southeast from Alewife station in Cambridge, Massachusetts, through downtown Boston (with transfers to the Green Line at Park Street, the Orange Line at Downtown Crossing, and the Silver Line at South Station) then passing through South Boston. South of JFK/UMass it splits into two branches terminating at Braintree and Ashmont stations.
+                <img src="redans.jpg" width="90%" height="auto"/>
+                Red Line tab allows the user to search for train schedule in the Red-Line for both Inbound & Outbound directions. To enhance the user friendliness of the website, I have provided the auto complete suggestions for both the boarding and destination place. 
+                After selecting the boarding and destination place, user should hit on the "Search" button which would display the immediate train schedule results. 
+                Google Maps API is used to plot the geographic location of boarding and destination places. DirectionsService object is utilized for polyline route drawing on the google maps.
+
+                <br />
+
+            </p>
+            <p>
+                <b>Demystifying The Architecture: </b>
+                <br />
+                <br />
+                <b>Step 1: Fetch The Stop ID - </b>Every stop has an unique StopID associated to it. Once after user selects the stop, the corresponding stop id is fetched from the SQL DB Table - venkat89.RedLineStopDetails
+                <br />
+                <b>Step 2: Fetch The RouteID's - </b>Compute the RouteID's for the boarding and destination places. There might be multiple train routes which would pass along the boarding and destination place.
+                 For instance, a train route in Red Line might be from Alewife to Ashmont and another route might be from Alewife to Braintree.
+                 All these RouteID's are retrieved from SQL DB Table - venkat89.RedLineRouteID which is required for further perusal.
+                <br />
+                <b>Step 3: Find The Matching RouteID's - </b>Once after obtaining all the RouteID's for the respective boarding and destination stop we will have to compute the matching RouteID's.
+                <br />
+                <b>Step 4: Identify The Direction (InBound / OutBound) - </b>After computing the matching RouteID's, the direction has to be identified.
+                 Basically the direction should be one of the following: Inbound or Outbound and is indicated by (0 / 1) in the response xml. 
+                <br />
+                <b>Step 5: JSON Parsing - </b>Here comes the final step in our logic processing. With the obtained RouteID and direction, an API call is made to the MBTA which returns the train schedule on that route in XML/JSON format.
+                 I have written a helper functions for processing the JSON data to retrieve the arrival and departure timings of the train at the respective boarding and destination spots. The time format in the JSON is of Unix Epoch time stamp, which is then converted to the normal readable format for displaying it in the front end.
+            
+            </p>
+
+            <p>
+                <b>Test Data for Braintree: </b>Boarding Place : Alewife ; Destination Place : Savin Hill<br />
+                <b>Test Data for Ashmont: </b>Boarding Place : Alewife ; Destination Place : JFK
+            </p>
+
+            <p>
+                <b>Source Code:</b>
+            </p>
+            <ul>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/ashmont.html">Ashmont Red line HTML Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/Ashmont.js">Ashmont Red line JS Code</a></li>                    
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/braintree.html">Braintree Red line HTML Code</a></li>
+                    <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/Braintree.js">Braintree Red line JS Code</a></li>                    
+            </ul>
+    </div>
+    <div class="row" style="background-color: Silver">
+        <h1 class="profname" style="color:brown">Blue Line</h1>
+        <p>
+                <b>Description: </b>The Blue Line is one of four subway lines of the Massachusetts Bay Transportation Authority (MBTA) serving Downtown, East Boston and the North Shore.
+                 It runs from northeast to southwest, extending from Wonderland station in Revere, Massachusetts to Bowdoin station near Beacon Hill in Boston. It meets the Green Line at Government Center, connects with the Orange Line at State Street, and provides service to Airport station which has a free shuttle connection to Logan International Airport.
+                <img src="blueans.jpg" width="90%" height="auto"/>
+                Blue Line tab allows the user to search for train schedule in the Blue-Line for both Inbound & Outbound directions. To enhance the user friendliness of the website, I have provided the auto complete suggestions for both the boarding and destination place. 
+                After selecting the boarding and destination place, user should hit on the "Search" button which would display the immediate train schedule results. 
+                Google Maps API is used to plot the geographic location of boarding and destination places. DirectionsService object is utilized for polyline route drawing on the google maps.
+
+                <br />
+
+            </p>
+            <p>
+                <b>Demystifying The Architecture: </b>
+                <br />
+                <br />
+                <b>Step 1: Fetch The Stop ID - </b>Every stop has an unique StopID associated to it. Once after user selects the stop, the corresponding StopID is fetched from the SQL DB Table - venkat89.BlueLineStopDetails
+                <br />
+                <b>Step 2: Fetch The RouteID's - </b>Compute the RouteID's for the boarding and destination places. There might be multiple train routes which would pass along the boarding and destination place.
+                 For instance, a train route in Blue Line might be from Bowdoin to Orient Heights and another route might be from Bowdoin to Wonderland.
+                 All these RouteID's are captured which is required for further perusal.
+                <br />
+                <b>Step 3: Find The Matching RouteID's - </b>Once after obtaining all the RouteID's for the respective boarding and destination stop we will have to compute the matching RouteID's.
+                <br />
+                <b>Step 4: Identify The Direction (InBound / OutBound) - </b>After computing the matching RouteID's, the direction has to be identified.
+                 Basically the direction should be one of the following: Inbound or Outbound and is indicated by (0 / 1) in the response xml. 
+                <br />
+                <b>Step 5: JSON Parsing - </b>Here comes the final step in our logic processing. With the obtained RouteID and direction, an API call is made to the MBTA which returns the train schedule on that route in XML/JSON format.
+                 I have written a helper functions for processing the JSON data to retrieve the arrival and departure timings of the train at the respective boarding and destination spots. The time format in the JSON is of Unix Epoch time stamp, which is then converted to the normal readable format for displaying it in the front end.
+            </p>
+
+            <p>
+                <b>Test Data: </b>Boarding Place : Acquarium ; Destination Place : Airport
+            </p>
+
+            <p>
+                <b>Source Code:</b>
+            </p>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/blue.html">Blue line HTML Code</a></li>
+                <li><a href="http://net4.ccs.neu.edu/home/neelesh/fileview/Default.aspx?~/Project/cs5610/js/BlueLine.js">Blue line JS Code</a></li>                    
+                    
+            </ul>
+    </div>
+<div class="row" style="background-color: #cccc66">
+        <h1 class="profname" style="color:brown;">Test Data</h1>
+            <p><b>Green Line B: </b></p>
+            <ul>
+                <li>Boarding Place -> Park Street </li>
+                <li>Destination Place -> Kenmore </li>
+            </ul>
+            <p><b>Green Line C: </b></p>
+            <ul>
+                <li>Boarding Place -> Copley </li>
+                <li>Destination Place -> Hynes </li>
+            </ul>
+            <p><b>Green Line D: </b></p>
+            <ul>
+                <li>Boarding Place -> Coolidge Corner </li>
+                <li>Destination Place -> Boylston </li>
+            </ul>
+            <p><b>Green Line E: </b></p>
+            <ul>
+                <li>Boarding Place -> Northeastern</li>
+                <li>Destination Place -> Boylston </li>
+            </ul>
+
+            <p><b>Orange Line: </b></p>
+            <ul>
+                <li>Boarding Place -> Ruggles </li>
+                <li>Destination Place -> Downtown Crossing </li>
+            </ul>
+
+            <p><b>Ashmont Red Line: </b></p>
+            <ul>
+                <li>Boarding Place -> Alewife </li>
+                <li>Destination Place -> JFK </li>
+            </ul>
+            <p><b>Braintree Red Line: </b></p>
+            <ul>
+                <li>Boarding Place -> Alewife </li>
+                <li>Destination Place -> Savin Hill </li>
+            </ul>
+
+            <p><b>Blue Line: </b></p>
+            <ul>
+                <li>Boarding Place -> Bowdoin </li>
+                <li>Destination Place -> Airport </li>
+            </ul>
+    </div>
+    <div class="row" style="background-color: Silver">
+        <h1 class="profname" style="color:brown">MBTA Restful API</h1>
+        <p>
+                <b>RESTfull API: </b>
+                Representational state transfer (REST) is an architectural style consisting of a coordinated set of architectural constraints applied to components, connectors, and data elements, within a distributed hypermedia system. REST ignores the details of component implementation and protocol syntax in order to focus on the roles of components, the constraints upon their interaction with other components, and their interpretation of significant data elements
+            </p>
+
+            <p>
+                <b>Request URL & Its Response In XML: </b>
+            </p>
+
+            
+            <p>
+                <b>Route List By Stop: </b>
+            </p>
+            <ul>
+                <li>http://realtime.mbta.com/developer/api/v2/routesbystop?api_key={Your API Key}&amp;stop=70243&format=json</li>
+                <li><a href="http://realtime.mbta.com/developer/api/v2/routesbystop?api_key=TbUOod1u00WYU5oe6x7h1g&stop=70243&format=json" target="_blank">Sample Response JSON</a></li>
+            </ul>
+
+            <p>
+                <b>Directions By Route: </b>
+            </p>
+            <ul>
+                <li>http://realtime.mbta.com/developer/api/v2/stopsbyroute?api_key={Your API Key}&amp;route=red&format=json</li>
+                <li><a href="http://realtime.mbta.com/developer/api/v2/stopsbyroute?api_key=TbUOod1u00WYU5oe6x7h1g&route=red&format=json" target="_blank">Sample Response JSON</a></li>
+            </ul>
+
+            <p>
+                <b>Train Schedule By Route And Direction: </b>
+            </p>
+            <ul>
+                <li>http://realtime.mbta.com/developer/api/v2/schedulebyroute?api_key={Your API Key}&amp;route=red&format=json</li>
+                <li><a href="http://realtime.mbta.com/developer/api/v2/schedulebyroute?api_key=TbUOod1u00WYU5oe6x7h1g&route=red&format=json" target="_blank">Sample Response XML</a></li>
+            </ul>            
+    </div>
+<div class="row" style="background-color: #cccc66">
+        <h1 class="profname" style="color:brown;">Future Scope</h1>
+        <p>
+                <b>Vision:</b>
+                I thoroughly enjoyed the website development, especially my project. I would definitely be adding more features to the website in near future. Some of them would be as follows:
+            </p>
+            <ul>
+                <li>Integration Of All Lines (Green, Orange, Red and Blue)
+                </li>
+                <li>Leveraging the website to have bus timings as well
+                </li>
+            </ul>
+    </div>
+</div>
+</body>
+</html>

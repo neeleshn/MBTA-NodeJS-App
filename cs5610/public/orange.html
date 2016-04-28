@@ -1,0 +1,94 @@
+        <div class="row">
+            <div class="col-sm-5" style="padding: 20px">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                        <input list="FromStation" name="FromStation" class="form-control" ng-model="FromStation">
+                          <datalist id="FromStation">
+                            <option value="Forest Hills">
+                            <option value="Green Street">
+                            <option value="Stony Brook">
+                            <option value="Jackson Square">
+                            <option value="Roxbury Crossing">
+                            <option value="Ruggles">
+                            <option value="Massachusetts Avenue">
+                            <option value="Back Bay">
+                            <option value="Tufts Medical Center">
+                            <option value="Chinatown">
+                            <option value="Downtown Crossing">
+                            <option value="State Street">
+                            <option value="Haymarket">
+                            <option value="North Station">
+                            <option value="Community College">
+                            <option value="Sullivan Square">
+                            <option value="Assembly">
+                            <option value="Wellington">
+                            <option value="Malden">
+                            <option value="Oak Grove">
+                          </datalist>
+                </div>
+            </div>
+            <div class="col-sm-5" style="padding: 20px">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                        <input list="ToStation" name="ToStation" class="form-control" ng-model="ToStation">
+                          <datalist id="ToStation">
+                            <option value="Forest Hills">
+                            <option value="Green Street">
+                            <option value="Stony Brook">
+                            <option value="Jackson Square">
+                            <option value="Roxbury Crossing">
+                            <option value="Ruggles">
+                            <option value="Massachusetts Avenue">
+                            <option value="Back Bay">
+                            <option value="Tufts Medical Center">
+                            <option value="Chinatown">
+                            <option value="Downtown Crossing">
+                            <option value="State Street">
+                            <option value="Haymarket">
+                            <option value="North Station">
+                            <option value="Community College">
+                            <option value="Sullivan Square">
+                            <option value="Assembly">
+                            <option value="Wellington">
+                            <option value="Malden">
+                            <option value="Oak Grove">
+                          </datalist>
+                </div>
+            </div>
+            <div class="col-sm-2" style="padding: 20px">
+                <button class="btn btn-warning" ng-click="searchfn()">Search</button>
+            </div>
+        </div>
+        <br />
+        <div ng-show="validsearch" class="container">
+            <div class="row">
+                <div class="col-sm-5" style="padding: 20px">
+                <div class=" backdiv-orange">
+                    <br /><br />
+                    Departs from <br /><span class="glyphicon glyphicon-home"></span>
+                    <span class="large"> {{FromStationjs}} </span>at <br />
+                    <span class="glyphicon glyphicon-time"></span><span class="large-i">{{FromTime}}</span><br /><br /><br />
+                    Reaches <br /><span class="glyphicon glyphicon-map-marker"></span>
+                    <span class="large"> {{ToStationjs}}</span> at <br />
+                    <span class="glyphicon glyphicon-time"></span><span class="large-i">{{ToTime}}</span><br /><br /><br />
+                    <button class="btn btn-default" disabled><span class="glyphicon glyphicon-time"></span><span class="large-i">{{TimeDiff}}</span></button>
+                    </div>
+                </div>
+                <div class="col-sm-5" style="padding: 20px">
+                    <iframe ng-src="{{trustSrc(MapsURL)}}" border-radius="10" width="100%" height="400" frameborder="0"></iframe>
+                </div>
+                <div class="col-sm-2" style="padding: 20px"><span ng-show="ActiveUser"><button class="btn btn-warning" ng-click="AddTrip()"><span class="glyphicon glyphicon-star"></span></button></span></div>
+            </div>
+        </div>
+        <br /><hr /><br />
+        <div ng-show="FavOrangeTrips.length>0" class="container">
+            <div class=" backdiv-orange">
+                <br />
+                <h2>Your favourite routes in Orange Line</h2>
+                <ul>
+                <li ng-repeat="x in FavOrangeTrips track by $index">
+                {{x}}
+                </li>
+                </ul>
+            </div>
+        </div>
